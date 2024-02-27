@@ -1,0 +1,18 @@
+# /Users/maxi/.config/tmuxinator/apps.yml
+
+name: apps
+root: ~/Documents/01_PROJECTS/
+
+windows:
+  - Mentorship:
+      root: ~/Documents/01_PROJECTS/apps/coaching
+      layout: main-vertical
+      panes:
+        - l .
+        - pwd
+  - DSS:
+      root: ~/Documents/01_PROJECTS/dev_digital-solution-studio/digital-solution.studio
+      layout: main-vertical
+      panes:
+        - l .
+        - pwd

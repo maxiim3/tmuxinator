@@ -1,7 +1,7 @@
-# /Users/maxi/.config/tmuxinator/apps.yml
+# /Users/maxi/.config/tmuxinator/legendis.yml
 
-name: apps
-root: ~/Documents/01_PROJECTS/
+name: legendis
+root: ~/Documents/01_PROJECTS/Legendis/dev/legendis-next-app/
 
 # Optional tmux socket
 # socket_name: foo
@@ -45,36 +45,11 @@ root: ~/Documents/01_PROJECTS/
 # attach: false
 
 windows:
-  - root:
-      root: ~/Documents/01_PROJECTS/DEV_PLAYGROUND
-      panes:
-        - cd $(find . -maxdepth 2 -print | fzf --preview 'bat --style=numbers --color=always {}' | xargs -m 1 lvim) && l .
-  - dashboard-app:
-      root: ~/Documents/01_PROJECTS/DEV_PLAYGROUND/dashboard_next_app/
+  - legendis-website:
+      root: ~/Documents/01_PROJECTS/Legendis/dev/legendis-next-app/
       layout: main-vertical
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
-      # synchronize: after
+      synchronize: after
       panes:
-        - l .
-  - cs50-2024:
-      root: ~/Documents/01_PROJECTS/DEV_PLAYGROUND/cs50-2024
-      layout: main-vertical
-      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
-      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
-      # synchronize: after
-      panes:
-        - l .
-  - go-backend:
-      root: ~/Documents/01_PROJECTS/DEV_PLAYGROUND/go-apps/go-backend
-      layout: main-vertical
-      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
-      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
-      # synchronize: after
-      panes:
-        - l .
-  - airddm:
-      root: ~/Documents/01_PROJECTS/DEV_PLAYGROUND/airddm/test-technique-front
-      layout: main-vertical
-      panes:
-        - l .
+        - lvim .
